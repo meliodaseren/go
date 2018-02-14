@@ -1,6 +1,6 @@
 # Go
 
-# GO
+# Go
 
 # Power
 
