@@ -1,14 +1,15 @@
-# Go
+## Go Go Power
 
-macOS 10.13.3
+跟風學一下，打發時間啦。
 
-Go 1.9.4
+OS: macOS 10.13 / Windows 7
 
-GoLand 2017.3.2
+Version: Go 1.12.4
 
-# Go
+IDE: VS Code 1.33
 
-https://go-tour-zh-tw.appspot.com/
+     GoLand 2017.3.2 (Dropped)
 
-# Power
+### Tutorial
 
+https://tour.golang.org/
