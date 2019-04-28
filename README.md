@@ -1,14 +1,64 @@
-# Go
+## GO GO POWER (RANGERS)
 
-macOS 10.13.3
+> 跟風學一下，打發時間啦。
 
-Go 1.9.4
+**OS**: macOS 10.13 / Windows 7 64 bits
 
-GoLand 2017.3.2
+**Version**: Go 1.12.4
 
-# Go
+**IDE**: VS Code 1.33 / ~~GoLand 2017.3.2~~
 
-https://go-tour-zh-tw.appspot.com/
+### Tutorial
 
-# Power
+https://tour.golang.org/
 
+### How to set the environment ?
+
+> 因為今天比較趕，速速紀錄一下今天在 Windows 7 的環境設置。
+
+#### 1. Set the environment variable
+
+`GOROOT` : Default may be `C:\Go\`
+
+`GOPATH` : Default may be `C:\gotool\`
+
+#### 2. Install the required packages
+
+```sh
+go get -u -v github.com/nsf/gocode  
+go get -u -v github.com/rogpeppe/godef  
+go get -u -v github.com/golang/lint/golint  
+go get -u -v github.com/lukehoban/go-find-references  
+go get -u -v sourcegraph.com/sqs/goreturns  
+go get -u -v golang.org/x/tools/cmd/gorename  
+go get -u -v github.com/derekparker/delve/cmd/dlv  
+```
+
+#### 3. Install the VS Code & Extension
+
+Type `Ctrl + Shift + P` and find the Go extension, then install it
+
+Go Extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go
+
+#### 4. Modify the `launch.json` for running and debugging
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            //"mode": "deubg",
+            //"program": "${fileDirname}",
+            "program": "${workspaceRoot}",
+            "env": {},
+            "args": []
+        }
+    ]
+}
+```
+
+#### 5. Type the `F5` for running and debugging
