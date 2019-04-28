@@ -2,14 +2,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            //"name": "Launch",
+            "name": "dlv-DEBUG",
             "type": "go",
             "request": "launch",
-            "mode": "auto",
-            //"mode": "deubg",
+            //"mode": "auto",
+            "mode": "debug",
             //"program": "${fileDirname}",
             "program": "${workspaceRoot}",
-            "env": {},
+            "windows": {
+                "env": {
+                    "GOPATH": "${env:GOPATH};${workspaceRoot}"
+                }
+            },
+            "osx": {
+                "env": {
+                    "GOPATH": "${env:GOPATH}:${workspaceRoot}"
+                }
+            },
+            "linux": {
+                "env": {
+                    "GOPATH": "${env:GOPATH}:${workspaceRoot}"
+                }
+            },
             "args": []
         }
     ]
